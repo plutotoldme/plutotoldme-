@@ -150,6 +150,33 @@
     .floating-footer a:hover {
       color: #ffeaa7;
       text-decoration: underline;
+      
+      .button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+  margin: 2.5em auto;
+  max-width: 90%;
+}
+
+.button-group a {
+  display: inline-block;
+  font-size: 1.1em;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 0.8em 1.5em;
+  color: #ffd369;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.button-group a:hover {
+  background-color: rgba(255, 211, 105, 0.2);
+  transform: scale(1.05);
+}
     }
   </style>
 </head>
@@ -168,11 +195,13 @@
   <div class="quote">And I'm spilling the tea.</div>
 
   <div class="sigil">♑︎</div>
-  <a class="testimonials-link" href="images.html">Read Client Love Notes</a>
-  
-  <a class="waitlist" href="http://bit.ly/3FDzoCD" target="_blank">Join the Waitlist</a>
-  <a class="myth-link" href="/orpheus-eurydice-ellchemized.html">Orpheus & Eurydice Ellchemized</a>
-  <a class="remix-link" href="/bullet-wound-remix.html">Read the Bullet Wound Remix</a>
+
+<div class="button-group">
+  <a href="images.html">Read Client Love Notes</a>
+  <a href="http://bit.ly/3FDzoCD" target="_blank">Join the Waitlist</a>
+  <a href="/orpheus-eurydice-ellchemized.html">Orpheus & Eurydice Ellchemized</a>
+  <a href="/bullet-wound-remix.html">Read the Bullet Wound Remix</a>
+</div>
   <div class="floating-footer">
     <a href="https://www.instagram.com/plutotold.me" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
     <a href="https://www.facebook.com/share/163N8nkSWD/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
