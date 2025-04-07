@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pluto Told Me Everything</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1h+pC8zHClHweTgl4Q6dxJHkA1GSPJYHUP1XzmHUI/4DFkG2Zf9xSH3xNRfEdJ6nbB3V5bYc77uPL5s/63A7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       background: url('https://i.imgur.com/V0qDeDh.jpeg') no-repeat center center fixed;
@@ -45,10 +46,12 @@
       color: #ffd369;
       text-decoration: none;
       font-weight: bold;
+      transition: all 0.3s ease-in-out;
     }
 
     a:hover {
       text-decoration: underline;
+      color: #ffeaa7;
     }
 
     .sigil {
@@ -64,6 +67,11 @@
       border-radius: 10px;
       font-size: 1.1em;
       backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
+    }
+
+    .waitlist:hover {
+      transform: scale(1.05);
     }
 
     .remix-link, .myth-link, .giveaway-link, .testimonials-link {
@@ -76,10 +84,12 @@
       border-radius: 10px;
       text-decoration: none;
       backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
     }
 
     .remix-link:hover, .myth-link:hover, .giveaway-link:hover, .testimonials-link:hover {
       background-color: rgba(255, 211, 105, 0.2);
+      transform: scale(1.05);
     }
 
     .giveaway-banner {
@@ -112,8 +122,43 @@
       text-decoration: underline;
     }
 
-    .sparkles {
-      display: none;
+    .contact-section {
+      margin: 6em auto 4em auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2em 3em;
+      border-radius: 15px;
+      display: inline-block;
+      text-align: left;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 20px rgba(255, 211, 105, 0.2);
+      color: #fdf6e3;
+    }
+
+    .contact-section h2 {
+      font-size: 1.8em;
+      margin-bottom: 0.8em;
+      color: #ffd5f2;
+    }
+
+    .contact-section ul {
+      list-style: none;
+      padding: 0;
+      line-height: 2.2;
+      font-size: 1.1em;
+    }
+
+    .contact-section li {
+      margin: 0.5em 0;
+    }
+
+    .contact-section li i {
+      margin-right: 0.6em;
+      color: #ffd369;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-section li:hover i {
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -138,6 +183,16 @@
   <a class="myth-link" href="/orpheus-eurydice-ellchemized.html">Orpheus & Eurydice Ellchemized</a>
   <a class="remix-link" href="/bullet-wound-remix.html">Read the Bullet Wound Remix</a>
   <a class="testimonials-link" href="images.html">Read Client Love Notes</a>
+
+  <div class="contact-section">
+    <h2>Contact Me</h2>
+    <ul>
+      <li><i class="fas fa-envelope"></i>Email: <a href="mailto:plutotold.me@gmail.com">plutotold.me@gmail.com</a></li>
+      <li><i class="fab fa-instagram"></i>Instagram: <a href="https://www.instagram.com/plutotold.me" target="_blank">@plutotold.me</a></li>
+      <li><i class="fab fa-facebook"></i>Facebook: <a href="https://www.facebook.com/share/163N8nkSWD/?mibextid=wwXIfr" target="_blank">Follow on Facebook</a></li>
+      <li><i class="fab fa-tiktok"></i>TikTok: <a href="https://www.tiktok.com/@plutotold.me?_t=ZT-8vJ8qqBBxtK&_r=1" target="_blank">@plutotold.me</a></li>
+    </ul>
+  </div>
 
   <script>
     const countdownElement = document.getElementById("countdown");
