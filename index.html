@@ -152,3 +152,61 @@
       text-decoration: underline;
     }
   </style>
+</head>
+<body>
+  <div class="giveaway-banner" id="giveaway-banner">
+    <span>Flash Giveaway Ends In: <span id="countdown"></span></span>
+    <span>
+      Enter on
+      <a href="https://www.instagram.com/plutotold.me" target="_blank">Instagram</a>,
+      <a href="https://www.facebook.com/share/163N8nkSWD/?mibextid=wwXIfr" target="_blank">Facebook</a>, or
+      <a href="https://www.tiktok.com/@plutotold.me?_t=ZT-8vJ8qqBBxtK&_r=1" target="_blank">TikTok</a>
+    </span>
+  </div>
+
+  <h1>Pluto Told Me Everything</h1>
+  <div class="quote">And I'm spilling the tea.</div>
+  <p>Divine downloads. Karmic healing. Signing off on soul contracts. Brought to you by Ellie via <strong>Ellchemy</strong>.</p>
+
+  <div class="sigil">♑︎</div>
+
+  <a class="waitlist" href="http://bit.ly/3FDzoCD" target="_blank">Join the Waitlist</a>
+  <a class="myth-link" href="/orpheus-eurydice-ellchemized.html">Orpheus & Eurydice Ellchemized</a>
+  <a class="remix-link" href="/bullet-wound-remix.html">Read the Bullet Wound Remix</a>
+  <a class="testimonials-link" href="images.html">Read Client Love Notes</a>
+
+  <div class="floating-footer">
+    <a href="https://www.instagram.com/plutotold.me" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.facebook.com/share/163N8nkSWD/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://www.tiktok.com/@plutotold.me?_t=ZT-8vJ8qqBBxtK&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="mailto:plutotold.me@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+  </div>
+
+  <script>
+    const countdownElement = document.getElementById("countdown");
+    const banner = document.getElementById("giveaway-banner");
+    const targetDate = new Date("April 9, 2025 03:11:00 GMT");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        countdownElement.innerHTML = "Giveaway Closed";
+        setTimeout(() => banner.style.display = "none", 5000);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
