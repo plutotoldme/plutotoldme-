@@ -44,17 +44,22 @@
       align-items: center;
     }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2em;
+    .carousel-container {
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 1em 0;
       margin-top: 2em;
     }
 
-    .gallery img {
-      width: 260px;
-      max-width: 90vw;
+    .carousel-track img {
+      display: inline-block;
+      scroll-snap-align: center;
+      margin: 0 1em;
+      width: 85vw;
+      max-width: 280px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.6);
     }
@@ -123,13 +128,15 @@
   <div class="floating-header">Client Love Notes</div>
 
   <div class="overlay">
-    <div class="gallery">
-      <img src="images/quote1.png" alt="Testimonial 1">
-      <img src="images/quote2.png" alt="Testimonial 2">
-      <img src="images/quote3.png" alt="Testimonial 3">
-      <img src="images/quote4.png" alt="Testimonial 4">
-      <img src="images/quote5.png" alt="Testimonial 5">
-      <img src="images/quote6.png" alt="Testimonial 6">
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img src="images/quote1.png" alt="Testimonial 1">
+        <img src="images/quote2.png" alt="Testimonial 2">
+        <img src="images/quote3.png" alt="Testimonial 3">
+        <img src="images/quote4.png" alt="Testimonial 4">
+        <img src="images/quote5.png" alt="Testimonial 5">
+        <img src="images/quote6.png" alt="Testimonial 6">
+      </div>
     </div>
     <a href="/index.html">Return to Home</a>
   </div>
