@@ -129,15 +129,17 @@
 </head>
 
 <body>
-  <div class="giveaway-banner" id="giveaway-banner">
-    <span>Flash Giveaway Ends In: <span id="countdown"></span></span>
-    <span>
-      Enter on
-      <a href="https://www.instagram.com/plutotold.me" target="_blank">Instagram</a>,
-      <a href="https://www.facebook.com/share/163N8nkSWD/?mibextid=wwXIfr" target="_blank">Facebook</a>, or
-      <a href="https://www.tiktok.com/@plutotold.me?_t=ZT-8vJ8qqBBxtK&_r=1" target="_blank">TikTok</a>
-    </span>
-  </div>
+<div class="giveaway-banner" id="giveaway-banner">
+  <span>The portal opens in: <span id="countdown"></span></span>
+  <span>
+    Readings begin May 20. Join the
+    <a href="http://bit.ly/3FDzoCD" target="_blank">Waitlist</a>
+    or follow me on
+    <a href="https://www.instagram.com/plutotold.me" target="_blank">Instagram</a>,
+    <a href="https://www.facebook.com/share/163N8nkSWD/?mibextid=wwXIfr" target="_blank">Facebook</a>, and
+    <a href="https://www.tiktok.com/@plutotold.me?_t=ZT-8vJ8qqBBxtK&_r=1" target="_blank">TikTok</a>
+  </span>
+</div>
 
   <h1>Pluto Told Me Everything</h1>
   <div class="quote">And I'm spilling the tea.</div>
@@ -158,31 +160,30 @@
     <a href="mailto:plutotold.me@gmail.com"><i class="fas fa-envelope"></i> Email</a>
   </div>
 
-  <script>
-    const countdownElement = document.getElementById("countdown");
-    const banner = document.getElementById("giveaway-banner");
-    const targetDate = new Date("April 9, 2025 03:11:00 GMT");
+<script>
+  const countdownElement = document.getElementById("countdown");
+  const banner = document.getElementById("giveaway-banner");
+  const targetDate = new Date("May 20, 2025 12:00:00 EST");
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-      if (distance <= 0) {
-        countdownElement.innerHTML = "Giveaway Closed";
-        setTimeout(() => banner.style.display = "none", 5000);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    if (distance <= 0) {
+      countdownElement.innerHTML = "The portal is open!";
+      return;
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
