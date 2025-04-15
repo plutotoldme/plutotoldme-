@@ -66,13 +66,42 @@
       color: #ffeaa7;
       text-shadow: 1px 1px 2px #000;
     }
+    .header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.back-button {
+  font-size: 1em;
+  color: #ffd369;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 1em;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #ffeaa7;
+  text-decoration: underline;
+}
+
+.venus-header {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
   </style>
 </head>
 <body>
 
-  <a href="index.html" class="back-button">← Back to Main</a>
+<div class="header-container">
+  <a href="index.html" class="back-button">← Back</a>
+  <img src="images/IMG_2072.png" alt="Venus Header" class="venus-header" />
+</div>
 
-<img src="images/IMG_2072.png" alt="Venus Header" style="max-width: 100%; height: auto; margin-bottom: 2em;" />
 
 
   <h1>Who Are You in Love?</h1>
