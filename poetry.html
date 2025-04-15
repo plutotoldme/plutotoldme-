@@ -1,39 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<style><head>
-  .accordion {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffd369;
-  cursor: pointer;
-  padding: 1em;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 1.2em;
-  transition: 0.3s ease;
-  font-family: 'DM Serif Display', serif;
-  text-shadow: 1px 1px 2px #000;
-  margin: 1em 0;
-}
-
-.accordion:hover {
-  background-color: rgba(255, 211, 105, 0.2);
-}
-
-.panel {
-  padding: 0 1em;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fdf6e3;
-  font-size: 1.1em;
-  font-family: 'DM Serif Display', serif;
-  text-shadow: 1px 1px 2px #000;
-}
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poetry — Pluto Told Me Everything</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <style>
@@ -51,21 +20,49 @@
       font-size: 3em;
       color: #ffd5f2;
       text-shadow: 1px 1px 3px #000;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }
 
-    .poem {
+    .accordion {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #ffd369;
+      cursor: pointer;
+      padding: 1em;
+      width: 100%;
       max-width: 800px;
-      margin: 2em auto;
+      margin: 1em auto;
+      border: none;
+      text-align: left;
+      outline: none;
       font-size: 1.2em;
-      line-height: 1.8;
-      white-space: pre-line;
+      transition: 0.3s ease;
+      font-family: 'DM Serif Display', serif;
       text-shadow: 1px 1px 2px #000;
+      border-radius: 8px;
     }
 
-    .download-button {
+    .accordion:hover {
+      background-color: rgba(255, 211, 105, 0.2);
+    }
+
+    .panel {
+      padding: 0 1em;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fdf6e3;
+      font-size: 1.1em;
+      font-family: 'DM Serif Display', serif;
+      text-shadow: 1px 1px 2px #000;
+      max-width: 800px;
+      margin: 0 auto 2em auto;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .back-button {
       display: inline-block;
-      margin: 2em 0;
+      margin-top: 3em;
       padding: 0.8em 1.5em;
       background: rgba(0, 0, 0, 0.75);
       color: #ffd369;
@@ -77,58 +74,46 @@
       transition: transform 0.3s ease;
     }
 
-    .download-button:hover {
+    .back-button:hover {
       background-color: rgba(255, 211, 105, 0.2);
       transform: scale(1.05);
     }
-
-    .signature {
-      font-style: italic;
-      margin-top: 3em;
-      color: #ffeaa7;
-      text-shadow: 1px 1px 2px #000;
-    }
   </style>
 </head>
-
 <body>
-  <h1>Poetry Portal</h1>
-<button class="accordion">Bless the Mirror</button>
-<div class="panel">
-  External validation --<br>
-  a gift and a curse,<br>
-a medicine to be taken responsibly.<br><br>
-To feel seen is powerful.<br>
-But when those same eyes look away --<br>
-are you returning home?<br>
-Or are you chasing the relfection?<br>
-Are you entering dark rooms just to catch another glimpse?<br><br>
-Are you forgetting that the image you saw was you all along?<br><br>
-- Ellie
-</div>
+  <h1>Poetry</h1>
 
+  <button class="accordion">Poem Title 1</button>
+  <div class="panel">
+    Line one of your poem.<br>
+    Line two of your poem.<br>
+    Line three...<br>
+  </div>
 
+  <button class="accordion">Poem Title 2</button>
+  <div class="panel">
+    Another beautiful verse.<br>
+    Line two, dreamy and soft.<br>
+    Line three...<br>
+  </div>
 
+  <a href="index.html" class="back-button">← Back to Home</a>
 
-  <div class="signature">— a Pluto Told Me Everything original</div>
-
-  <a href="index.html" class="download-button">← Back to Home</a>
   <script>
-  const accordions = document.querySelectorAll(".accordion");
+    const accordions = document.querySelectorAll(".accordion");
 
-  accordions.forEach(button => {
-    button.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
+    accordions.forEach(button => {
+      button.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
 
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
-
