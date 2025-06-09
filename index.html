@@ -40,36 +40,6 @@
       margin: 2em 0;
     }
 
-    .giveaway-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      color: #ffd5f2;
-      font-size: 1em;
-      padding: 0.8em 1em;
-      z-index: 999;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.2em;
-      flex-wrap: wrap;
-    }
-
-    #countdown {
-      font-weight: bold;
-      color: #ffd369;
-      text-shadow: 1px 1px 2px #000;
-    }
-
-    .giveaway-banner a {
-      color: #ffd369;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
     .button-group {
       display: flex;
       flex-direction: column;
@@ -129,32 +99,19 @@
 </head>
 
 <body>
-<div class="giveaway-banner" id="giveaway-banner">
-  <span>The portal opens in: <span id="countdown"></span></span>
-  <span>
-    Readings begin May 20. Join the
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkFR6EqkC7e1DkdKul9YmAGa9WZy0QwBqBXteN62n26Fdetw/viewform" target="_blank">Waitlist</a>
-    or follow me on
-    <a href="https://www.instagram.com/plutotold.me" target="_blank">Instagram</a>,
-    <a href="https://www.facebook.com/share/163N8nkSWD/?mibextid=wwXIfr" target="_blank">Facebook</a>, and
-    <a href="https://www.tiktok.com/@plutotold.me?_t=ZT-8vJ8qqBBxtK&_r=1" target="_blank">TikTok</a>
-  </span>
-</div>
 
   <h1>Pluto Told Me Everything</h1>
   <div class="quote">And I'm spilling the tea.</div>
   <div class="sigil">♑︎</div>
 
-  <!-- Add this below your current button group -->
-<div class="button-group">
-  <a href="images.html">Read Client Love Notes</a>
-  <a href="http://bit.ly/3FDzoCD" target="_blank">Join the Waitlist</a>
-<a href="/venus-article.html">Who Are You in Love?</a> 
+  <div class="button-group">
+    <a href="images.html">Read Client Love Notes</a>
+    <a href="/venus-article.html">Who Are You in Love?</a> 
     <a href="pluto-post.html">Baddies Are From Pluto</a>
-  <a href="/orpheus-eurydice-ellchemized.html">Orpheus & Eurydice Ellchemized</a>
-  <a href="/bullet-wound-remix.html">Read the Bullet Wound Remix</a>
-  <a href="/poetry.html">Poetry</a>
-</div>
+    <a href="/orpheus-eurydice-ellchemized.html">Orpheus & Eurydice Ellchemized</a>
+    <a href="/bullet-wound-remix.html">Read the Bullet Wound Remix</a>
+    <a href="/poetry.html">Poetry</a>
+  </div>
 
   <div class="floating-footer">
     <a href="https://www.instagram.com/plutotold.me" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
@@ -163,30 +120,5 @@
     <a href="mailto:plutotold.me@gmail.com"><i class="fas fa-envelope"></i> Email</a>
   </div>
 
-<script>
-  const countdownElement = document.getElementById("countdown");
-  const banner = document.getElementById("giveaway-banner");
-  const targetDate = new Date("May 20, 2025 12:00:00 EST");
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance <= 0) {
-      countdownElement.innerHTML = "The portal is open!";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
 </body>
 </html>
